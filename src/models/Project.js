@@ -16,6 +16,14 @@ const Project = sequelize.define('Project', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  type: {
+    type: DataTypes.ENUM('DESIGN', 'FINAL', 'TUBITAK'),
+    allowNull: false,
+  },
+  startDate: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
 });
 
 export default Project;

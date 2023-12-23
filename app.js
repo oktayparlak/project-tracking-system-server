@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 /** Database Connection and Starting Server */
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log('Database connected!');
   /** Server */
   app.listen(PORT, () => {
